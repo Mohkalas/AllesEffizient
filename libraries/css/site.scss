@@ -1,0 +1,269 @@
+:root {
+  --colorFont: #116476;
+}
+
+.navbar {
+  .navbar-toggler {
+    font-size: 1rem !important;
+    z-index: 9999999;
+  }
+
+  .navbar-brand {
+    img {
+      width: 170px;
+      height: 70px;
+    }
+  }
+
+  #navbar-items {
+    position: absolute;
+    top: 110px;
+    left: 9%;
+    right: 9%;
+    z-index: 999;
+
+    .nav-item {
+      background-color: var(--colorFont);
+      margin: 0 10px;
+      box-sizing: content-box;
+      position: relative;
+      border-radius: 10px;
+      text-align: center;
+      a {
+        color: white !important;
+        font-family: "Sofia Sans", sans-serif;
+        font-size: 1vmax;
+
+        &:hover {
+          transition: 0.5s ease;
+          border-radius: 10px;
+          box-shadow: 2px 2px 5px 3px rgb(194, 176, 176);
+          color: #d1d4d4 !important;
+        }
+      }
+    }
+  }
+
+  #navbar-right {
+    display: flex;
+    justify-content: space-around;
+    width: 30rem;
+
+    .nav-item {
+      position: relative;
+
+      a {
+        color: var(--colorFont) !important;
+        font-family: "Sofia Sans", sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      &:before {
+        content: "";
+        background: black;
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        left: 10px;
+        height: 2px;
+        transition: 0.1s;
+      }
+
+      &:hover:before {
+        content: "";
+        background: rgb(92, 90, 90);
+        position: absolute;
+        bottom: 0;
+        width: 80%;
+        left: 10px;
+        height: 2px;
+        transition: 2s;
+      }
+    }
+  }
+}
+
+.ImageDiv {
+  margin-top: 5.2rem;
+
+  .carousel .carousel-item {
+    height: 580px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+}
+
+section {
+  background: #eeeeee;
+  border-radius: 10px;
+  width: 100%;
+  margin: 70px 0;
+  padding: 50px 70px;
+  font-family: "Lexend Deca", sans-serif;
+
+  h1 {
+    margin-bottom: 12px;
+  }
+
+  .description {
+    line-height: 30px;
+    font-size: 17px;
+    padding: 15px;
+  }
+}
+
+#footer-wrapper {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #888888;
+  word-wrap: break-word;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: #20222d;
+  margin: 0;
+  padding: 70px 100px;
+  font-style: normal;
+
+  .title {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  #contact-right {
+    .form {
+      input,
+      textarea {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.01);
+        font-size: 14px;
+        color: #fff;
+        line-height: 34px;
+        box-sizing: border-box;
+        padding: 0 10px;
+        margin: 0 0 10px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 3px;
+      }
+
+      textarea {
+        height: 120px;
+        min-height: 50px;
+        max-height: 150px;
+      }
+
+      #form-submit {
+        background: #003ee6;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1270px;
+  }
+}
+@media (max-width: 768px) and (min-width: 590px) {
+  #navbar-items {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 460px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  .navbar-brand {
+    img {
+      width: 120px !important;
+      height: 60px !important;
+    }
+  }
+
+  .navbar {
+    .navbar-collapse {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99999;
+    }
+
+    #navbar-items {
+      top: 70px;
+      left: 5%;
+      right: 5%;
+      .nav-item {
+        margin: 2px;
+        a {
+          color: white !important;
+          font-family: "Sofia Sans", sans-serif;
+          font-size: 2vmax;
+        }
+      }
+    }
+
+    #navbar-right {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background: white;
+      box-shadow: 1px 1px 1px gray;
+      width: 100%;
+      position: relative;
+      top: 30px;
+
+      .nav-item {
+        color: #047bc1;
+
+        a {
+          font-family: "Sofia Sans", sans-serif;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .ImageDiv {
+    margin-top: 0;
+
+    .carousel .carousel-item {
+      height: 380px;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  section {
+    margin: 20px 0;
+    padding: 20px;
+  }
+
+  #footer-wrapper {
+    padding: 20px 10px;
+
+    #contact-right {
+      margin-top: 15px;
+    }
+  }
+}
