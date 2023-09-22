@@ -242,7 +242,7 @@ section .description {
     margin-top: 0;
   }
   .ImageDiv .carousel .carousel-item {
-    height: 380px;
+    height: 300px;
   }
   .ImageDiv .carousel .carousel-item img {
     height: 100%;
